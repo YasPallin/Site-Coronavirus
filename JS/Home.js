@@ -15,8 +15,8 @@ $(document).ready(function () {
             dark_mode = 1;
         }
         else{
-            $("main").css("background-color", "#F2F2F2")
-            $("main").css("color", "black")
+            $("main").css("background-color", "inherit")
+            $("main").css("color", "inherit")
             dark_mode = 0;
         }
     });
@@ -37,13 +37,8 @@ $(document).ready(function () {
     });
 
     //Atualiza data e hora
-    var d = new Date();
-    dia = d.getDay();
-    mes = d.getMonth();
-    ano = d.getFullYear();
-    hora = d.getHours();
-    minuto = d.getMinutes();
-    document.getElementById("data").innerHTML = (dia + " / " + mes + " / " + ano + "  " + hora + ":" + minuto)
+    atualiza_hora();
+
 
     //Essas funções abaixo NÃO fazem parte do cabeçalho e do rodapé, é da main da página HOME
    
@@ -66,3 +61,14 @@ $(document).ready(function () {
     });
 });
 
+function atualiza_hora(){
+	var d = new Date();
+    // dia = d.getDate();
+    // mes = d.getMonth() + 1;
+    // ano = d.getFullYear();
+    // hora = d.getHours();
+    // minuto = d.getMinutes();
+    // document.getElementById("data").innerHTML = (dia + " / " + mes + " / " + ano + "  " + hora + ":" + minuto)
+	$("#data").text(d.toLocaleString());
+	setTimeout(atualiza_hora, 1000);
+}
