@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/home.css">
-    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
-    <title>Home</title>
+	<script src="JS/jquery-3.6.0.min.js"></script>
+	<script src="JS/jquery-ui-1.12.1.js"></script>
+	<script src="JS/script_vacinas.js"></script>
+    <!-- <link rel="stylesheet" href="CSS/home.css"> -->
+	<link rel="stylesheet" href="CSS/jquery-ui-1.12.1.css">
+	<link rel="stylesheet" href="CSS/style_vacinas.css">
+
+    <title>Vacinas</title>
     <!-- Libras -->
-    <script src="script_inicio.js"></script>
+    <!-- <script src="script_inicio.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -55,7 +60,125 @@
 
 
     <main>
-        
+        <section class="flex_pai_vacinas">
+				<h1> Vacinas Covid-19 </h1>
+				<h3>Atualmente existem quatro formas para uma vacina contra Covid-19 ser disponibilizada no país: registro, uso emergencial, importação excepcional ou pelo consórcio Covax Facility. No momento há quatro vacinas aprovadas sendo utilizadas no país, clique em cada uma para saber mais.</h3>
+
+			<section class="flex_vacinas_aprovadas">
+				<section class="box_vacinas">
+					<h1 id="vacina_um">Comirnaty (Pfizer/Wyeth)</h1>
+					<div id="box_um">
+						<h3>Sobre</h3>
+							<p>
+								Tecnologia: RNA mensageiro sintético.
+							</p>
+						<h3>Métodos</h3>
+							<p>
+								Quantidade de doses para imunização: duas doses. A segunda dose deve ser aplicada com um intervalo maior ou igual a 21 dias após a primeira. Faixa etária autorizada: a partir de 12 anos.  
+							</p>
+						<h3>Eficácia</h3>
+						<p>
+							Os dados do estudo de Fase 3 demonstraram que, embora haja proteção parcial após cerca de 12 dias da primeira dose, são necessárias duas doses da vacina para que o potencial máximo de proteção contra a doença seja atingido. Os resultados de eficácia global da vacina, de 95%, foram aferidos a partir de 7 dias da segunda dose do esquema vacinal.
+						</p>
+					</div>					
+				</section>
+				<section class="box_vacinas">
+					<h1 id="vacina_dois">Comirnaty (Pfizer/Wyeth)</h1>
+					<div id="box_dois">
+						<h3>Sobre</h3>
+							<p>
+								Tecnologia: RNA mensageiro sintético.
+							</p>
+						<h3>Métodos</h3>
+							<p>
+								Quantidade de doses para imunização: duas doses. A segunda dose deve ser aplicada com um intervalo maior ou igual a 21 dias após a primeira. Faixa etária autorizada: a partir de 12 anos.  
+							</p>
+						<h3>Eficácia</h3>
+						<p>
+							Os dados do estudo de Fase 3 demonstraram que, embora haja proteção parcial após cerca de 12 dias da primeira dose, são necessárias duas doses da vacina para que o potencial máximo de proteção contra a doença seja atingido. Os resultados de eficácia global da vacina, de 95%, foram aferidos a partir de 7 dias da segunda dose do esquema vacinal.
+						</p>
+					</div>	
+				</section>
+				<section class="box_vacinas">
+					<h1 id="vacina_tres">Comirnaty (Pfizer/Wyeth)</h1>
+					<div id="box_tres">
+						<h3>Sobre</h3>
+							<p>
+								Tecnologia: RNA mensageiro sintético.
+							</p>
+						<h3>Métodos</h3>
+							<p>
+								Quantidade de doses para imunização: duas doses. A segunda dose deve ser aplicada com um intervalo maior ou igual a 21 dias após a primeira. Faixa etária autorizada: a partir de 12 anos.  
+							</p>
+						<h3>Eficácia</h3>
+						<p>
+							Os dados do estudo de Fase 3 demonstraram que, embora haja proteção parcial após cerca de 12 dias da primeira dose, são necessárias duas doses da vacina para que o potencial máximo de proteção contra a doença seja atingido. Os resultados de eficácia global da vacina, de 95%, foram aferidos a partir de 7 dias da segunda dose do esquema vacinal.
+						</p>
+					</div>	
+				</section>
+				<section class="box_vacinas">
+					<h1 id="vacina_quatro">Comirnaty (Pfizer/Wyeth)</h1>
+					<div id="box_quatro">
+						<h3>Sobre</h3>
+							<p>
+								Tecnologia: RNA mensageiro sintético.
+							</p>
+						<h3>Métodos</h3>
+							<p>
+								Quantidade de doses para imunização: duas doses. A segunda dose deve ser aplicada com um intervalo maior ou igual a 21 dias após a primeira. Faixa etária autorizada: a partir de 12 anos.  
+							</p>
+						<h3>Eficácia</h3>
+						<p>
+							Os dados do estudo de Fase 3 demonstraram que, embora haja proteção parcial após cerca de 12 dias da primeira dose, são necessárias duas doses da vacina para que o potencial máximo de proteção contra a doença seja atingido. Os resultados de eficácia global da vacina, de 95%, foram aferidos a partir de 7 dias da segunda dose do esquema vacinal.
+						</p>
+					</div>	
+				</section>
+
+			</section>
+			<h1>Teste seus conhecimentos</h1>
+			<h3>Para descobrir se você está por dentro das vacinas aprovadas no Brasil, arraste as opções para o centro do quadrado.</h3>
+			<h3>As opções verdes são as vacinas válidas, as que ficarem vermelhas são falsas.</h3>
+			<section class="flex_joguinho">				
+				<div id="draggable_um" class="ui-widget-content verdadeiro">
+					<p>Comirnaty (Pfizer/Wyeth)</p>
+				</div>
+
+				<div id="draggable_seis" class="ui-widget-content falso">
+					<p>Buscopanvac (Lab. Trust)</p>
+				</div>
+
+				<div id="draggable_tres" class="ui-widget-content verdadeiro">
+					<p>Janssen Vaccine (Janssen-Cilag)</p>
+				</div>
+
+				<div id="draggable_cinco" class="ui-widget-content falso">
+					<p>Cloroquinavac (Exercito Brasileiro)</p>
+				</div>
+
+				<div id="draggable_dois" class="ui-widget-content verdadeiro">
+					<p>Coronavac (Butantan)	</p>
+				</div>
+
+				<div id="draggable_sete" class="ui-widget-content falso">
+					<p>Vacina de Polaramine (Lab. Fakenew)</p>
+				</div>
+
+				<div id="draggable_quatro" class="ui-widget-content verdadeiro">
+					<p>Oxford/Covishield (Fiocruz e Astrazeneca)</p>
+				</div>
+
+				<div id="draggable_oito" class="ui-widget-content falso">
+					<p>Vacflex (Lab. NotTrue)</p>
+				</div>	
+
+				<div id="droppable" class="ui-widget-header">
+				<p>Insira aqui</p>
+				</div>
+			</section>
+
+
+			</section>
+		</section>
     </main>
 
     <footer>
@@ -72,7 +195,7 @@
         <a href="#banner"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
     </footer>
 
-    <script src="JS/Home.js"></script>
+    <!-- <script src="JS/Home.js"></script> -->
 </body>
 
 </html>
