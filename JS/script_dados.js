@@ -94,3 +94,56 @@ function calcula_fase(){
 $(document).ready(function(){
 	$("#botao_calcula_fase").click(calcula_fase)
 })
+
+
+var dark_mode = 0;
+    //Essas duas funções servem para acionar de desacionar o modo noturno
+	$(document).ready(function(){
+		$("#darkmode").click(function()
+		{   
+			if(dark_mode == 0){
+				$("main").css("background-color", "black");
+				$("main").css("color", "white");
+				$("h3").css("color", "white");
+				$("h5").css("color", "white");
+				dark_mode = 1;
+			}
+			else{
+				$("main").css("background-color", "inherit");
+				$("main").css("color", "inherit");
+				$("h3").css("color", "inherit");
+				$("h5").css("color", "inherit");
+				dark_mode = 0;
+			}
+		});
+	});
+
+	function atualiza_hora(){
+		var d = new Date();
+		// dia = d.getDate();
+		// mes = d.getMonth() + 1;
+		// ano = d.getFullYear();
+		// hora = d.getHours();
+		// minuto = d.getMinutes();
+		// document.getElementById("data").innerHTML = (dia + " / " + mes + " / " + ano + "  " + hora + ":" + minuto)
+		$("#data").text(d.toLocaleString());
+		setTimeout(atualiza_hora, 1000);
+	}
+// Para rodar a hora e aumentar / diminuir o texto:
+var tamanho_letra = 16;
+$(document).ready(function(){
+	atualiza_hora();
+	$("#letra_aumenta").click(function()
+    {
+        if(tamanho_letra < 25)
+        tamanho_letra += 1;
+        $("html").css("font-size", tamanho_letra);
+    });
+    $("#letra_diminui").click(function()
+    {
+        if(tamanho_letra > 16)
+        tamanho_letra -= 1;
+        $("html").css("font-size", tamanho_letra);
+    
+    });
+});

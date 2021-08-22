@@ -29,17 +29,7 @@ $(document).ready(function () {
     $('html').css({ 'font-size': tamanho_letra });
   });
 
-  //Atualiza data e hora
-  var d = new Date();
-  dia = d.getDay();
-  mes = d.getMonth();
-  ano = d.getFullYear();
-  hora = d.getHours();
-  minuto = d.getMinutes();
-  document.getElementById('data').innerHTML =
-    dia + ' / ' + mes + ' / ' + ano + '  ' + hora + ':' + minuto;
 });
-
 //Função trocar a cor de fundo dos fatos
 
 $(document).ready(function () {
@@ -86,3 +76,19 @@ $(document).ready(function () {
     $('#imagemOqueFazer').fadeToggle();
   });
 });
+
+// Função para mudar a cor do fundo
+$(document).ready(function(){
+	$("#conteudoMain1").scroll(function(){
+		$("#conteudoMain1").css({backgroundColor: "#416BBF"})
+	})
+	$("#conteudoMain2").scroll(function(){
+		$("#conteudoMain2").css({backgroundColor: "#416BBF"})
+	})
+	$("#conteudoMain3").scroll(function(){
+		$("#conteudoMain3").css({backgroundColor: "#416BBF"})
+	})
+	$("#conteudoMain4").scroll(function(){
+		$("#conteudoMain4").css({backgroundColor: "#416BBF"})
+	})
+})
