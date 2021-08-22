@@ -16,17 +16,12 @@ $(document).ready(function () {
             $("main").css("background-color", "black")
             $("main").css("color", "#F2F2F2")
             dark_mode = 1;
-            // dark mode do header pagina protocolo   ############################################ Gabriel Rocha
-            $("header").css("background-image","linear-gradient(#0E2F59, #36486d)");
-            $("footer").css("background-image","linear-gradient(#0E2F59, #36486d)");
-            //Fim dark mode do header pagina protocolo
+           
         }
         else{
             $("main").css("background-color", "inherit")
             $("main").css("color", "inherit")
-            //dark mode pagina procotolo ,volta background image original  ##################### gabriel rocha
-            $("header").css("background-image","linear-gradient(#0E2F59, #416BBF)");
-            $("footer").css("background-image","linear-gradient(#0E2F59, #416BBF)");
+           
             dark_mode = 0;
         }
     });
