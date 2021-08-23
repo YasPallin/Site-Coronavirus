@@ -243,6 +243,7 @@ header{
     position: sticky;
 	top: 0;
     box-shadow: 0 5px 10px #416BBF;
+	z-index: 5;
 }
 #logo{
     height: 16vh;
