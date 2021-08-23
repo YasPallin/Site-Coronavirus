@@ -5,6 +5,12 @@ var tamanho_letra = 16;
 $(".img_main").last().hide()
 
 $(document).ready(function () {
+	atualiza_hora()
+// pagina Quem somos 
+        $("#texto").slideDown(2000);
+        $("#imagem1").slideDown(2000);
+        $("#imagem2").slideDown(2000);
+
 
     //Essas duas funções servem para acionar de desacionar o modo noturno
     $("#darkmode").click(function()
@@ -15,8 +21,8 @@ $(document).ready(function () {
             dark_mode = 1;
         }
         else{
-            $("main").css("background-color", "inherit")
-            $("main").css("color", "inherit")
+            $("main").css("background-color", "#F2F2F2")
+            $("main").css("color", "black")
             dark_mode = 0;
         }
     });
@@ -35,10 +41,17 @@ $(document).ready(function () {
         $("html").css("font-size", tamanho_letra)
     
     });
-
-    //Atualiza data e hora
-    atualiza_hora();
-
+	function atualiza_hora(){
+		var d = new Date();
+		// dia = d.getDate();
+		// mes = d.getMonth() + 1;
+		// ano = d.getFullYear();
+		// hora = d.getHours();
+		// minuto = d.getMinutes();
+		// document.getElementById("data").innerHTML = (dia + " / " + mes + " / " + ano + "  " + hora + ":" + minuto)
+		$("#data").text(d.toLocaleString());
+		setTimeout(atualiza_hora, 1000);
+	}
 
     //Essas funções abaixo NÃO fazem parte do cabeçalho e do rodapé, é da main da página HOME
    
@@ -61,14 +74,3 @@ $(document).ready(function () {
     });
 });
 
-function atualiza_hora(){
-	var d = new Date();
-    // dia = d.getDate();
-    // mes = d.getMonth() + 1;
-    // ano = d.getFullYear();
-    // hora = d.getHours();
-    // minuto = d.getMinutes();
-    // document.getElementById("data").innerHTML = (dia + " / " + mes + " / " + ano + "  " + hora + ":" + minuto)
-	$("#data").text(d.toLocaleString());
-	setTimeout(atualiza_hora, 1000);
-}
