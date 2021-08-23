@@ -9,11 +9,13 @@
     <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
     <title>Cadastro</title>
     <!-- Libras -->
-    <script src="script_inicio.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+    <!-- Barra de progresso -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 <body>
@@ -31,7 +33,7 @@
                         <li> <a href="#">Galeria</a></li>
                         <li><a href="#">Protocolos</a></li>
                         <li><a href="Tratamento.html">Tratamento</a></li>
-                        <li><a href="#">Entre na fila</a></li>
+                        <li><a href="Cadastro.html">Entre na fila</a></li>
                     </ul>
                 </li>
             </ul>
@@ -76,7 +78,7 @@
 
                     <P>
                         <label for="cpf">CPF</label><br>
-                        <input class="input_form" type="text" name="cpf" placeholder="xxx.xxx.xxx-xx">
+                        <input class="input_form" type="number" name="cpf" placeholder="xxxxxxxxxxx">
                     </P>
 
                     <P>
@@ -85,26 +87,29 @@
                     </P>
 
                     <P><label for="sexo">Sexo</label><br>
-                        <select class="input_form" name="sexo">
-                            <option value="feminino">Feminino</option>
+                        <select class="input_form" name="sexo" >
+                            <option value="">Selecione</option>
                             <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
                         </select>
                     </P>
 
                     <P>
-                        <input type="checkbox" value="gestante">
-                        <label for="taste_1">Gestante</label> <br>
+                        <input class="gestante" type="checkbox" value="gestante">
+                        <label class="gestante" for="taste_1">Gestante</label> <br>
                         <input type="checkbox" value="quilombola">
                         <label for="taste_1">Quilombola</label>
                     </P>
 
                     <p><label for="raça">Raça</label><br>
                         <select class="input_form" name="raca">
+                            <option value="">Selecione</option>
                             <option value="branco">Branco</option>
                             <option value="pardo">Pardo</option>
                             <option value="preto">Preto</option>
                             <option value="amarelo">Amarelo</option>
                             <option value="indigina">Indígina</option>
+                            <option value="indeclarado">Não declarar</option>
                         </select>
                     </p>
 
@@ -125,6 +130,7 @@
                     <P>
                         <label for="comorbidade">Comorbidades</label><br>
                         <select class="input_form" name="comorbidade">
+                            <option value="">Selecione</option>
                             <option value="1">Diabetes</option>
                             <option value="2">Doença Pulmonar Obstrutiva Crônica</option>
                             <option value="3">Asma grave com uso de medicamento contínuo</option>
@@ -150,7 +156,8 @@
                             <option value="23">Fibrose cística</option>
                             <option value="24">Síndrome de Down</option>
                             <option value="25">Anemia falciforme</option>
-                            <option value="26">Outros</option>
+                            <option value="26">Outras</option>
+                            <option value="27">Não tenho comorbidades</option>
                         </select>
                     </P>
 
@@ -161,7 +168,7 @@
 
                     <p>
                         <label for="cartao_sus">Cartão do SUS</label><br>
-                        <input class="input_form" type="text" name="cartao_sus" placeholder="xxx.xxxx.xxxx.xxxx">
+                        <input class="input_form" type="number" name="cartao_sus" placeholder="xxxxxxxxxxxxxxx">
                     </p>
 
 
@@ -193,8 +200,9 @@
                     </p>
 
                     <p>
-                        Grupo profissional <br>  
+                        Grupo profissional <br>
                         <select class="input_form" name="profissao">
+                            <option value="">Selecione</option>
                             <option value="1">Trabalhadores da área de Saúde</option>
                             <option value="2">Professores (do nível básico ao superior)</option>
                             <option value="3">Profissionais de forças de segurança e salvamento</option>
@@ -207,17 +215,23 @@
 
                     <p id="bt_form">
                         <input id="bt_enviar" type="button" value="Quero entrar na fila">
-                        <input id="bt_reset" type="reset" value="Limpar dados">
                     </p>
 
+                    <div id="progressbar"></div>
             </div>
 
-            <div class="divs_conteudo">Resultado</div>
+            <div class="divs_conteudo">Resultado: </div>
+        </div>
+
+        <!-- Libras -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
         </div>
 
     </main>
-
-
 
     <footer>
         <p>&copy;Todos os direitos reservados</p>
