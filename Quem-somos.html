@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/Quem-somos.css">
     <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
-    <title>Home</title>
+    <title>Quem somos</title>
     <!-- Libras -->
+    <script src="script_inicio.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+    <script src="./JS/Quem-somos.js"></script>
 </head>
 
 <body>
@@ -53,16 +55,25 @@
     </header>
 
 
-    <main>
-        <img id="banner" src="Imagens/banner.jpg" alt="O que é covid?">
-
-        <section class="conteudo">
-            <img class="img_main" src="Imagens/slide3.jpeg" alt="O que é">
-            <img class="img_main" src="Imagens/slide1.jpeg" alt="O que você precisa saber">
-            <iframe class="img_main" src="https://www.youtube.com/embed/eUxx6ev16Wk" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+    <main>  
+        <img id="banner" src="Imagens/banner.jpg" alt="O que é covid?">     
+            <section id="titulo"><h1 >Quem somos </h1></section>
+        <section id="principal">
+            <article id="texto">
+				<p>
+					A etNET oferece soluções em tecnologia e tem como missão atender a todos os clientes de forma diferente e criativa, buscando agradar a todos. A maior meta é desenvolver e apresentar inovações que façam a diferença para o crescimento de outras organizações. 
+				</p>
+				<p>
+					Para conhecer o trabalho da etNet, clique <a href="etNET.html" target="_blank">aqui</a>.
+				</p>
+				<p>
+					O cliente final deste projeto é a prefeitura da cidade de Varginha, localizada no sul de Minas Gerais, considerada a 5º cidade mais segura do Brasil. foi solicitado um site onde os moradores pudessem aprender mais sobre o Covid, se cadastrar para a vacinação, acompanhar números etc.
+				</p>
+            </article>
+            <section >
+                <img id="imagem1" src="Imagens/prefeitura_varginha.jpg">
+                <img id="imagem2" src="Imagens/navi.jpg">
+            </section>
         </section>
 
         <!-- Libras -->
@@ -88,7 +99,7 @@
         <a href="#banner"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
     </footer>
 
-    <script src="JS/Home.js"></script>
+    
 </body>
 
 </html>

@@ -14,11 +14,11 @@
 
     <title>Vacinas</title>
     <!-- Libras -->
-    <!-- <script src="script_inicio.js"></script>
+     <script src="script_inicio.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script> -->
+    </script> 
 </head>
 
 <body>
@@ -30,15 +30,15 @@
         <nav>
             <ul class="menu">
                 <li><a href="Home.html">Home</a></li>
-                <li><a href="#">Quem Somos</a> </li>
+                <li><a href="Quem-somos.html">Quem Somos</a> </li>
                 <li><a href="Boletim.html"> Boletim</a> </li>
-                <li><a href="#"> Vacinas</a></li>
+                <li><a href="Vacinas_Aprovadas.html"> Vacinas</a></li>
                 <li><a href="#">Campanha de Vacinação</a>
                     <ul>
-                        <li> <a href="#">Galeria</a></li>
-                        <li><a href="#">Protocolos</a></li>
-                        <li><a href="#">Tratamento</a></li>
-                        <li><a href="#">Entre na fila</a></li>
+                        <li> <a href="galeria.html">Galeria</a></li>
+                        <li><a href="protocolos.html">Protocolos</a></li>
+                        <li><a href="Tratamento.html">Tratamento</a></li>
+                        <li><a href="Cadastro.html">Entre na fila</a></li>
                     </ul>
                 </li>
             </ul>
@@ -61,10 +61,10 @@
 
     <main>
         <section class="flex_pai_vacinas">
-				<div id="dialog" title="Basic dialog">
+				<div id="dialog" title="ATENÇÃO!">
 					<p>Para saber mais sobre o andamento da vacinação em Varginha, siga para a página de <a href="Boletim.html"> Boletim </a> </p>
 			  	</div>
-				<h1> Vacinas Covid-19 </h1>
+				<h1 id="inicio"> Vacinas Covid-19 </h1>
 				<h3>Atualmente existem quatro formas para uma vacina contra Covid-19 ser disponibilizada no país: registro, uso emergencial, importação excepcional ou pelo consórcio Covax Facility. No momento há quatro vacinas aprovadas sendo utilizadas no país, clique em cada uma para saber mais.</h3>
 
 			<section class="flex_vacinas_aprovadas">
@@ -182,6 +182,13 @@
 
 			</section>
 		</section>
+		<!-- Libras -->
+		<div vw class="enabled">
+			<div vw-access-button class="active"></div>
+			<div vw-plugin-wrapper>
+				<div class="vw-plugin-top-wrapper"></div>
+			</div>
+		</div>
     </main>
 
     <footer>
@@ -195,7 +202,7 @@
                     src="Imagens/facebook.png" alt="_blank"></a>
         </div>
         <span id="data"></span>
-        <a href="#banner"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
+        <a href="#inicio"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
     </footer>
 
     <!-- <script src="JS/Home.js"></script> -->
