@@ -47,12 +47,13 @@ $(document).ready(function () {
 //Função verificação dos fatos
 $(document).ready(function () {
   $('#fatoUm').click(function () {
-    $('h3:first').append('Isso é fake!');
+    $('h3:first').text('Isso é fake!');
   });
 });
 
 //Função para alterar a imagem de Recomendações
 $(document).ready(function () {
+  $('#imagemRecomendacoes').hide();
   $('#btn1').click(function () {
     $('#imagemRecomendacoes').slideUp(2000);
   });
@@ -66,6 +67,7 @@ $(document).ready(function () {
 
 //Função para alterar a imagem de Recomendações
 $(document).ready(function () {
+	$('#imagemOqueFazer').hide();
   $('#btn4').click(function () {
     $('#imagemOqueFazer').fadeOut(500);
   });

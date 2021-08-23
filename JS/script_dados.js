@@ -40,6 +40,18 @@ function valida_input_enf(){
 }
 
 $(document).ready(function(){
+	$("#input_validacao_uti").focus(function(){
+		$("#input_validacao_uti").css({backgroundColor: "yellow"})
+	})
+	$("#input_validacao_enf").focus(function(){
+		$("#input_validacao_enf").css({backgroundColor: "yellow"})
+	})
+	$("#input_validacao_uti").blur(function(){
+		$("#input_validacao_uti").css({backgroundColor: "inherit"})
+	})
+	$("#input_validacao_enf").blur(function(){
+		$("#input_validacao_enf").css({backgroundColor: "inherit"})
+	})
 	$("#input_validacao_uti").blur(valida_input_uti);
 	$("#input_validacao_enf").blur(valida_input_enf)
 })

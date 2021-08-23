@@ -6,6 +6,7 @@ $("#bt_enviar").prop("disabled", true)
 $(".gestante").hide()
 $("#outras_comorbidade").hide()
 
+
 $(document).ready(function () {
 
     //Essas duas funções servem para acionar de desacionar o modo noturno
